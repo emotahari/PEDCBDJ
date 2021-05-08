@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'PEDCBDJ.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'DB_PEDCBDJ',
+        'HOST': 'DESKTOP-UQDL9FJ',
+        'USER': 'sa',
+        'PASSWORD': '13641364',
+
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        }
     }
 }
 
